@@ -4,7 +4,7 @@ import PropType from "prop-types";
 
 const SampleNumberCard = (props) => {
   const { mass, lpgAmount, sampleNumber, isGasExist } = props.data;
-  const isPassed = !(mass < 190 && mass > 210) || isGasExist ? true : false;
+  const isPassed = !((mass < 190 && mass > 210) || isGasExist) ? true : false;
 
   return (
     <div className="w-5/6 h-5/6 bg-[#526D82] flex flex-col gap-3 justify-center items-center rounded-md">
