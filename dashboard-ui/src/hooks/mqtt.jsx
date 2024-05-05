@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import mqtt from "mqtt";
 
 const host = "broker.emqx.io";
-const port = 8083;
+const port = 8084;
 const clientId = `psi_responsi${Math.random().toString(16).slice(3)}`;
 
 const mqttConnectionOption = {
@@ -22,7 +22,7 @@ const useMqttConnection = (topics) => {
   const [client, setClient] = useState(null);
 
   useEffect(() => {
-    setClient(mqtt.connect(`ws://${host}:${port}/mqtt`, mqttConnectionOption));
+    setClient(mqtt.connect(`wss://${host}:${port}/mqtt`, mqttConnectionOption));
   }, []);
 
   useEffect(() => {

@@ -59,12 +59,8 @@ const Dashboard = () => {
   return (
     <div className="w-full h-full flex flex-col gap-10 justify-center">
       <div className="w-full px-16 flex gap-5 justify-start">
-        <div className="flex gap-3 justify-start items-center">
-          <ConnectionStatus status={connectionStatus} />
-        </div>
-        <div className="flex gap-3 justify-start items-center">
-          <SubscribeStatus isSubscribe={isSubscribe} />
-        </div>
+        <ConnectionStatus status={connectionStatus} />
+        <SubscribeStatus isSubscribe={isSubscribe} />
       </div>
       <div className="w-full h-2/5 px-16 rounded-lg flex justify-between">
         <div className="w-4/6 h-full flex justify-center items-center gap-14 bg-white rounded-lg drop-shadow-lg">
