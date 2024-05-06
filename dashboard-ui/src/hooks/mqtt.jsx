@@ -31,9 +31,7 @@ const useMqttConnection = (topics) => {
         setConnectStatus("connected");
       });
       client.on("reconnect", () => setConnectStatus("reconnecting"));
-      client.on("error", (err) =>
-        setConnectStatus(`connection failed: ${err}`)
-      );
+      client.on("error", () => setConnectStatus(`connection failed`));
     }
   }, [client, connectStatus]);
 

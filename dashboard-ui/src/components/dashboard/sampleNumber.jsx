@@ -33,12 +33,12 @@ const SampleNumberCard = (props) => {
 };
 
 SampleNumberCard.propTypes = {
-  data: {
+  data: PropType.shape({
     mass: PropType.number.isRequired,
     lpgAmount: PropType.number.isRequired,
     sampleNumber: PropType.number.isRequired,
     isGasExist: PropType.bool.isRequired,
-  },
+  }),
 };
 
 export default SampleNumberCard;

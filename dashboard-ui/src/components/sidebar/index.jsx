@@ -35,7 +35,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`h-screen max-h-fit flex flex-col justify-between bg-[#27374D] p-4 ${
+      className={`h-screen min-h-screen flex flex-col justify-between bg-[#27374D] p-4 ${
         isExpand ? ` w-[16rem] items-start` : "w-13 items-center"
       }`}
     >
